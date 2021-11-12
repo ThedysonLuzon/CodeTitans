@@ -1,0 +1,52 @@
+
+
+
+       <h1>Welcome to Surveys Page by CodeTitans !</h1>
+    <a href="/surveys-list/add"  role="button">
+        Click here to add a New Survey
+    </a>
+
+<table>
+    
+    <tr>
+		<td style="width: 239px"><em><b>Survey Name</b></em></td>
+		<td style="width: 253px"><em><b>Author </b></em></td>
+		<td style="width: 285px"><em><b>Topic</b></em></td>
+        <td style="width: 285px"><em><b>Total number of questions</b></em></td>
+		<td style="width: 200px">&nbsp;</td>
+		<td style="width: 200px">&nbsp;</td>
+	</tr>
+
+    <% for(let iNum = 0; iNum < surveyList.length; iNum++) { %>
+    <tr>
+		<td style="width: 239px"><%= surveyList[iNum].Name %></td>
+		<td style="width: 253px"><%= surveyList[iNum].Author %></td>
+		<td style="width: 285px"><%= surveyList[iNum].Topic %></td>
+        <td style="width: 285px"><%= surveyList[iNum].Questions %></td>
+		<td style="width: 200px">
+            <a href="/surveys-list/edit/<%= surveyList[iNum]._id %>" >
+                Edit Survey </a></td>
+        <td style="width: 200px">
+                    <a href="/surveys-list/delete/<%= surveyList[iNum]._id %>" >
+                      Delete Survey</a>
+                </td>
+		
+        <% } %>
+	</tr>
+
+    
+</table>
+<br>
+<br>
+<br>
+<br>
+</div>
+
+
+
+  
+
+
+
+
+
